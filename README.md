@@ -12,7 +12,7 @@
 
 - [x] Code Structure [바로가기](https://ko.javascript.info/structure)
 - [x] Variable [바로가기](https://ko.javascript.info/variables)
-- [ ] Strict Mode [바로가기](https://ko.javascript.info/strict-mode)
+- [x] Strict Mode [바로가기](https://ko.javascript.info/strict-mode)
 - [ ] Global This [바로가기](https://ko.javascript.info/global-object)
 - [ ] Data Types [바로가기](https://ko.javascript.info/types)
 - [ ] Type Conversion [바로가기](https://ko.javascript.info/type-conversions)
