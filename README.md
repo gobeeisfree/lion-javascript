@@ -14,5 +14,5 @@
 - [x] Variable [바로가기](https://ko.javascript.info/variables)
 - [x] Strict Mode [바로가기](https://ko.javascript.info/strict-mode)
 - [x] Global This [바로가기](https://ko.javascript.info/global-object)
-- [ ] Data Types [바로가기](https://ko.javascript.info/types)
+- [x] Data Types [바로가기](https://ko.javascript.info/types)
 - [ ] Type Conversion [바로가기](https://ko.javascript.info/type-conversions)
