@@ -15,4 +15,9 @@
 - [x] Strict Mode [바로가기](https://ko.javascript.info/strict-mode)
 - [x] Global This [바로가기](https://ko.javascript.info/global-object)
 - [x] Data Types [바로가기](https://ko.javascript.info/types)
-- [ ] Type Conversion [바로가기](https://ko.javascript.info/type-conversions)
+- [x] Type Conversion [바로가기](https://ko.javascript.info/type-conversions)
+
+### Operations
+
+- [ ] Operations [바로가기](https://ko.javascript.info/types)
+- [ ] Operations [바로가기](https://ko.javascript.info/type-conversions)
