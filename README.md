@@ -35,5 +35,5 @@
 
 ## Function
 - [x] function (함수선언문) [바로가기](https://github.com/gobeeisfree/lion-javascript/blob/01.core/client/chapter/core/10-1.function.js)
-- [ ] function (함수표현식) [바로가기](https://github.com/gobeeisfree/lion-javascript/blob/01.core/client/chapter/core/10-2.function.js)
-- [ ] function (화살표함수) [바로가기](https://github.com/gobeeisfree/lion-javascript/blob/01.core/client/chapter/core/10-3.function.js)
+- [x] function (함수표현식) [바로가기](https://github.com/gobeeisfree/lion-javascript/blob/01.core/client/chapter/core/10-2.function.js)
+- [x] function (화살표함수) [바로가기](https://github.com/gobeeisfree/lion-javascript/blob/01.core/client/chapter/core/10-3.function.js)
