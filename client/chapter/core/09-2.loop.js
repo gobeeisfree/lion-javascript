@@ -24,23 +24,57 @@ do {
 //   '최초 실행된 메시지입니다. 이 메시지는 조건이 거짓이어도 볼 수 있습니다.' 출력
 // - 순환 중단
 
-let j = prompt('순환할 횟수를 입력하세요.', 0)
+// let j = prompt('순환할 횟수를 입력하세요.', 0)
 
-do {
-  console.log(j);
-  j--;
+// do {
+//   if ( j < 0 ) {
+//     console.log('최초 실행된 메시지입니다. 이 메시지는 조건이 거짓이어도 볼 수 있습니다.');
+//     break;
+//   }
+//   console.log(j);
+//   j--;
 
-  if ( j < 0 ) {
-    console.log('최초 실행된 메시지입니다. 이 메시지는 조건이 거짓이어도 볼 수 있습니다.');
-    break;
-  }
   
-} while (j);
-
-
+// } while (j);
 
 
 
 
 // do ~ while 문 (순환)
 // - 위 do ~ while 문을 순방향으로 순환되도록 설정
+
+let first = document.querySelector('.first');
+
+// first = first.nextSibling.nextSibling.nextSibling.nextSibling
+
+// do {
+//   first = first.nextSibling;
+
+// } while (first.nodeType !== document.ELEMENT_NODE);
+
+// console.log(first);
+
+function next(node) {
+  do {
+    node = node.nextSibling;
+  } while (node.nodeType !== 1);
+
+  return node;
+}
+
+const second = next(first);
+
+console.log(second);
+
+
+function prev(node) {
+  do {
+    node = node.previousSibling;
+  } while (node.nodeType !== 1);
+
+  return node;
+}
+
+const previous = prev(second)
+
+console.log(previous);
