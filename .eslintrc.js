@@ -5,6 +5,9 @@ module.exports = {
     node: true,
   },
   extends: 'eslint:recommended',
+  globals: {
+    getNode: 'readOnly',
+  },
   overrides: [
     {
       env: {
@@ -21,6 +24,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-unused-vars': 'off',
+    'no-unused-vars': 'warn',
   },
 };
