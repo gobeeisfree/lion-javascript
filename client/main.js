@@ -1,3 +1,10 @@
+// 모듈 프로그래밍 => js의 어려운 문법 x 방법론
+// getNode 가져오기  
+
+import { getNode, getNodes, clearContents, insertLast, } from "./lib/index.js";
+
+
+
 // [page-1]
 // 1. input value 값 가져오기
 
@@ -35,8 +42,8 @@ function page1(){
   const clear = getNode('#clear');
 
 
-  function handleClear(){
-
+  function handleClear(e){
+    e.preventDefault();
     // 3. firstValue값을 지운다.
     clearContents(first)
 
@@ -91,8 +98,8 @@ function handleInput(){
 
 }
 
-function handleClick(){
-
+function handleClick(e){
+  e.preventDefault();
 
   numberInputs.forEach(clearContents);
   result.textContent = '-'
@@ -107,3 +114,4 @@ clear.addEventListener('click',handleClick);
 
 
 }
+page2()
