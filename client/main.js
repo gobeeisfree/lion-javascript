@@ -15,7 +15,10 @@ import { attr, clearContents, diceAnimation, endScroll, getNode, getNodes, inser
 // 2. hidden 속성 제어하기
 //        - 기록 버튼 이벤트 바인딩
           // - hidden 속성 false 만들기
-          
+
+
+// [phase-3] 초기화
+
 const [startButton, recordButton, resetButton] = getNodes('.buttonGroup > button');
 const recordListWrapper = getNode('.recordListWrapper');
 const tbody = getNode('.recordList tbody');
