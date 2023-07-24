@@ -1,5 +1,4 @@
-console.log('hello js');
-const c = 10;
-const a = 10;
+import { diceAnimation } from "./lib/index.js";
 
-const b = 10;
+
+diceAnimation();
