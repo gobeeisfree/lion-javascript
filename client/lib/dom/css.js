@@ -43,6 +43,13 @@ const getCss = (node, prop) => {
   return getComputedStyle(node).getPropertyValue(prop);
 }
 
+/**
+ * 
+ * @param {HTMLElement} node 
+ * @param {string} prop 
+ * @param {string} value 
+ * @returns 
+ */
 export const css = (node, prop, value) => {
   return !value ? getCss(node, prop) : setCss(node, prop, value);
 }
