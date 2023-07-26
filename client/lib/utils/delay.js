@@ -25,13 +25,49 @@ delay(()=>{
 },0);
  */
 
+// 객체 합성 mixin
 
-function delayP() {
+const defaultOptions = {
+  shouldReject: false,
+  timeout: 1000,
+  data: '성공!',
+  errorMessage: '알 수 없는 오류가 발생했습니다.',
+}
+
+
+function delayP(options) {
   
-  return new Promise((resolve, reject) => {
-    resolve('성공입니다!');
+    let config = {...defaultOptions};
+
+    if (typeof options === 'number') {
+      config.timeout = options;
+    }
+
+    if (typeof options === 'object') {
+      config = {...defaultOptions,...options}
+    }
+    const {shouldReject, timeout, data, errorMessage} = config;
+
+    return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (!shouldReject) {
+        resolve(data);
+      } else {
+        reject({message: errorMessage});
+      }
+    }, timeout);
   })
 }
 
-delayP()
-.then(result => console.log(result))
+delayP({
+  shouldReject: false,
+})
+.then((res)=>{
+  // console.log(res);
+})
+.catch(({message})=>{
+  console.log(message);
+})
+.finally(()=>{
+  // console.log('어쨌든 실행');
+})
