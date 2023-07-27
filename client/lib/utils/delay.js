@@ -36,7 +36,7 @@ const defaultOptions = {
 }
 
 
-function delayP(options) {
+export function delayP(options) {
   
     let config = {...defaultOptions};
 

@@ -62,15 +62,15 @@ gobee.put = (url, body, options) => {
   });
 };
 
-const response = await gobee.get(`https://pokeapi.co/api/v2/pokemon/1`);
+// const response = await gobee.get(`https://pokeapi.co/api/v2/pokemon/1`);
 
-const pokemon = response.data;
-console.log(pokemon);
+// const pokemon = response.data;
+// console.log(pokemon);
 
-insertLast(
-  document.body,
-  `<div><img src="${pokemon.sprites['front_default']}" alt="" width="150px"/></div>`
-);
+// insertLast(
+//   document.body,
+//   `<div><img src="${pokemon.sprites['front_default']}" alt="" width="150px"/></div>`
+// );
 
 
 /* 
