@@ -1,16 +1,30 @@
 /* global gsap */
 
-import { attr, changeColor, delayP, getNode, gobee, renderEmptyCard, renderSpinner, renderUserCard } from "./lib/index.js";
+import { attr, changeColor, clearContents, delayP, getNode, gobee, renderEmptyCard, renderSpinner, renderUserCard } from "./lib/index.js";
 
 // 'https://jsonplaceholder.typicode.com/users'
 
-// 1. user를 가져오기
+// [phase-1]
+// 1. tiger 함수를 사용해서 user를 가져와 주세요.
 // 2. 함수 안으로 넣기
-// 3. 유저 데이터 렌더링
-//      - html template을 만든다.
-//      - 유저 data를 넘겨주기
-//      - insertLast 사용하기
-// 4. 함수 분리하기
+// 3. 유저 데이터 랜더링 
+//      - html template을 만든다. 
+//      - 유저 data를 넘겨주기.
+//      - inserLast 사용하기.
+// 4. 함수 분리 하기 
+
+
+// [phase-2]
+// 1. 에러가 발생 했을 때 
+// 2. empty svg를 생성하고 랜더링 해주세요 
+// 3. 함수 분리
+
+
+// [phase-3]
+// json-server 구성
+// data 설계
+// get, delete 통신 localhost
+// delete => 리랜더링(clear,render)
 
 
 const userCardInner = getNode('.user-card-inner');
@@ -30,7 +44,7 @@ async function renderUserList() {
       },
     })
 
-    const response = await gobee.get('https://jsonplaceholder.typicode.com/users');
+    const response = await gobee.get('http://localhost:3000/users');
     const userData = response.data;
     
     userData.forEach( item => renderUserCard(userCardInner, item) );
@@ -57,10 +71,16 @@ renderUserList();
 async function handleDelete(e) {
   const button = e.target.closest('button')
   const article = e.target.closest('article')
+
   if (!article || !button) return;
   const id = attr(article, 'data-index').slice(-1);
 
-  gobee.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+  gobee.delete(`http://localhost:3000/users/${id}`)
+  .then(()=>{
+    // 컨텐츠 항목 전체 지우기
+    clearContents(userCardInner);
+    renderUserList();
+  })
 }
 
 userCardInner.addEventListener('click',handleDelete)

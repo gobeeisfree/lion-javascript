@@ -1,4 +1,3 @@
-import { insertLast } from '../dom/index.js';
 
 const URL = 'https://jsonplaceholder.typicode.com/users';
 
@@ -12,7 +11,7 @@ const defaultOptions = {
 };
 
 export const gobee = async (options) => {
-  const { url, restOptions } = {
+  const { url, ...restOptions } = {
     ...defaultOptions,
     ...options,
     headers: {
@@ -61,27 +60,3 @@ gobee.put = (url, body, options) => {
     ...options,
   });
 };
-
-// const response = await gobee.get(`https://pokeapi.co/api/v2/pokemon/1`);
-
-// const pokemon = response.data;
-// console.log(pokemon);
-
-// insertLast(
-//   document.body,
-//   `<div><img src="${pokemon.sprites['front_default']}" alt="" width="150px"/></div>`
-// );
-
-
-/* 
-const response = await fetch('https://pokeapi.co/api/v2/pokemon/25')
-
-if (response.ok) {
-  const data = await response.json();
-  console.log(data);
-  console.log(data.sprites['front_default']);
-  
-  insertLast(document.body,`<img src="${data.sprites['front_default']}" alt="" />`)
-  insertLast(document.body,`<img src="${data.sprites['front_shiny']}" alt="" />`)
-}
- */
